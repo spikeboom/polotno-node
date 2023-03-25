@@ -26,6 +26,7 @@ module.exports.createInstance = async ({
     executablePath: await chrome.executablePath,
     headless: true,
     ignoreHTTPSErrors: true,
+    timeout: 120 * 1000,
   });
 
   return await createInstance({
